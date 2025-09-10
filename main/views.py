@@ -1,16 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from main.forms import NewsForm
 from main.models import News
-from django.http import HttpResponse
-from django.core import serializers
 
-
-# Create your views here.
 def show_main(request):
+    news_list = News.objects.all()
+
     context = {
         'npm' : '2406495451',
         'name': 'Zhafira Uzma',
-        'class': 'PBP C'
+        'class': 'PBP C',
+        'news_list': news_list
     }
 
     return render(request, "main.html", context)
