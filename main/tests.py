@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+from django.contrib.auth.models import User
 
 class MainTest(TestCase):
     def test_main_url_is_exist(self):
